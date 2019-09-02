@@ -4,15 +4,14 @@ import './App.css';
 import Form from './components/Form.js';
 
 function App() {
-  const [users, setUsers] = useState([]);
 
-  const addUser = (props) => {
-    setUsers([...users, props]);
-  }
+  // const addUser = (props) => {
+  //   setUsers([...users, props]);
+  // }
   
   return (
     <div className="App">
-      <Form addUser={addUser} />
+      <Form />
     </div>
   );
 }
