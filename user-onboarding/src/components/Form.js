@@ -78,12 +78,12 @@ const FormikLogin = withFormik({
             .required("You must accept our Terms of Service.")
     }),
 
-    handleSubmit(values, { setStatus }) {
+    handleSubmit(values, { setStatus, resetForm }) {
         axios.post("https://reqres.in/api/users", values)
             .then((res) => {
                 console.log(res.data)
                 setStatus(res.data);
-                values = {};
+                resetForm();
             })
             .catch((err) => console.log(err))
     }
